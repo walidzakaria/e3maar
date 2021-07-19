@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import path, include
-from .views import index, show_requests, home
+from .views import index, show_requests
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic import RedirectView
@@ -28,8 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('checkserver/', index, name='index'),
     path('api/auth/', include('authapp.urls')),
-    path('', home, name='home'),
     # path('api/info/', include('info.urls')),
+
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
     path('favicon-32x32.png', RedirectView.as_view(url=staticfiles_storage.url('img/favicon-32x32.png'))),
     path('favicon-16x16.png', RedirectView.as_view(url=staticfiles_storage.url('img/favicon-16x16.png'))),

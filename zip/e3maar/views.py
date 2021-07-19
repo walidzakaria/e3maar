@@ -17,6 +17,3 @@ def index(request):
 def show_requests(request):
     return render(request, 'request.html')
 
-
-def home(request):
-    return render(request, 'index.html')
