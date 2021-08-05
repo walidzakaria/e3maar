@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body style="
+    margin: 0;
+    font-family: Roboto, Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    box-sizing: border-box;
+    background-color: #fff;">
+
+  <!-- ======= Header ======= -->
+  <header
+     style="height: 70px; padding: 10px 0; background: #fff; box-sizing: border-box;"
+     id="header">
+    <div style="display: flex !important; max-width: 720px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; color: #4d4643; box-sizing: border-box;">
+
+      <div style="margin-right: auto !important; display: block; width: 193.3px; box-sizing: border-box;">
+        <a href="/"><img src="https://e3maar-eg.com/static/img/logo.png" alt="" style="max-width: 100%; height: auto; box-sizing: border-box;"></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" style="display: block; color: #4d4643; box-sizing: border-box;">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div style=" max-width: 720px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; box-sizing: border-box;">
+
+        <div style="justify-content: center!important; display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; box-sizing: border-box;">
+          <div style="text-align: center; box-sizing: border-box;">
+            <div>
+              <h2>{{ subject }}</h2>
+            </div>
+            <br>
+          </div>
+
+          <div style="position: relative; width: 100%; padding-right: 15px; padding-left: 15px; box-sizing: border-box;">
+            <form id="survey-form" role="form" style="width: 100%; box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%); padding: 30px; background: #fff; box-sizing: border-box;">
+              <div style="display: flex; flex-wrap: wrap; margin-right: -5px; margin-left: -5px; box-sizing: border-box;">
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="name">Name</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                    type="text" name="name" id="name" value="{{ name|title }}"/>
+                </div>
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="email">Email</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="email" name="email" id="email" value="{{ email }}"/>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="comments">Message</label>
+                <textarea 
+                  style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                id="comments" name="message" rows="5">{{ message }}</textarea>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+</body>
+
+</html>

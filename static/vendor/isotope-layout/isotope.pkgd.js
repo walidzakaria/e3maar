@@ -866,9 +866,9 @@ proto._create = function() {
     onEnd: {}
   };
 
-  this.css({
-    position: 'absolute'
-  });
+  // this.css({
+  //   position: 'relative'
+  // });
 };
 
 // trigger specified handler for event type

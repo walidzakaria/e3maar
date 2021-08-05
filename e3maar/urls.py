@@ -16,20 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import path, include
-from .views import index, show_requests, home
+from .views import about, survey, contact, post_survey, test_template, post_contact
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic import RedirectView
 
-admin.site.site_header = 'Ananas Hotel Facts'
-admin.site.site_title = 'Ananas Hotel Facts'
+admin.site.site_header = 'Emaar Construction'
+admin.site.site_title = 'Emaar Construction'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('checkserver/', index, name='index'),
     path('api/auth/', include('authapp.urls')),
-    path('', home, name='home'),
-    # path('api/info/', include('info.urls')),
+    path('about/', about, name='about'),
+    path('survey/', survey, name='survey'),
+    path('contact/', contact, name='contact'),
+    path('api/survey/', post_survey, name='post-survey'),
+    path('api/contact/', post_contact, name='post-contact'),
+    path('test-template/', test_template, name='test-template'),
+    path('', include('info.urls')),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
     path('favicon-32x32.png', RedirectView.as_view(url=staticfiles_storage.url('img/favicon-32x32.png'))),
     path('favicon-16x16.png', RedirectView.as_view(url=staticfiles_storage.url('img/favicon-16x16.png'))),

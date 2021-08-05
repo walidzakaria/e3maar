@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body style="
+    margin: 0;
+    font-family: Roboto, Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    box-sizing: border-box;
+    background-color: #fff;">
+
+  <!-- ======= Header ======= -->
+  <header
+     style="height: 70px; padding: 10px 0; background: #fff; box-sizing: border-box;"
+     id="header">
+    <div style="display: flex !important; max-width: 720px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; color: #4d4643; box-sizing: border-box;">
+
+      <div style="margin-right: auto !important; display: block; width: 193.3px; box-sizing: border-box;">
+        <a href="/"><img src="https://e3maar-eg.com/static/img/logo.png" alt="" style="max-width: 100%; height: auto; box-sizing: border-box;"></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" style="display: block; color: #4d4643; box-sizing: border-box;">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div style=" max-width: 720px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; box-sizing: border-box;">
+
+        <div style="justify-content: center!important; display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; box-sizing: border-box;">
+          <div style="text-align: center; box-sizing: border-box;">
+            <div>
+              <h2>Interior Design Survey</h2>
+            </div>
+            <br>
+          </div>
+
+          <div style="position: relative; width: 100%; padding-right: 15px; padding-left: 15px; box-sizing: border-box;">
+            <form id="survey-form" role="form" style="width: 100%; box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%); padding: 30px; background: #fff; box-sizing: border-box;">
+              <div style="display: flex; flex-wrap: wrap; margin-right: -5px; margin-left: -5px; box-sizing: border-box;">
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="name">Name</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                    type="text" name="name" id="name" value="{{ name|title }}"/>
+                </div>
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="email">Email</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="email" name="email" id="email" value="{{ email }}"/>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; margin-right: -5px; margin-left: -5px; box-sizing: border-box;">
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="phone">Phone</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="tel" name="phone" id="phone" value="{{ phone }}" />
+                </div>
+                
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="phone">Project Type</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="text" name="project-type" id="project-type" value="{{ projectType|title }}" />
+                </div>
+                {% if projectType == 'landscape' %}
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="phone">Design Class</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="text" name="design-class" id="design-class" value="{{ designClass|title }}" />
+                </div>
+                {% endif %}
+              </div>
+
+              {% if projectType == 'restaurantCafeteria' %}
+              <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="restaurant-type">Restaurant Type</label>
+                <input style="display: block;
+                width: 100%;
+                height: calc(1.5em + .75rem + 2px);
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: .25rem; box-sizing: border-box;"
+                type="text" name="restaurant-type" id="restaurant-type" value="{{ restaurantType|title }}" />
+              </div>
+              {% endif %}
+
+              <div style="display: flex; flex-wrap: wrap; margin-right: -5px; margin-left: -5px; box-sizing: border-box;">
+                {% if projectType != 'landscape' %}
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="design-type">Design Type</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="text" name="design-type" id="design-type" value="{{ designType|title }}" />
+                </div>
+                {% endif %}
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="color-scheme">Color Scheme</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="text" name="color-scheme" id="color-scheme" value="{{ colorScheme|title }}" />
+                </div>
+              </div>
+
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;">Materials</label><br>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if wood %} checked {% endif %} >
+                  Wood
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if stone %} checked {% endif %} >
+                  Stone
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if marbleGranite %} checked {% endif %} >
+                  Marble & Granite
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if metal %} checked {% endif %} >
+                  Metal
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if glass %} checked {% endif %} >
+                  Glass
+                </label>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; margin-right: -5px; margin-left: -5px; box-sizing: border-box;">
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="patterns">Patterns</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="text" name="patterns" id="patterns" value="{{ pattern|title }}" />
+                </div>
+              </div>
+
+              {% if projectType == 'landscape' %}
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;">Preferred Features</label><br>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if light %} checked {% endif %} >
+                  Light
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if waterFeatures %} checked {% endif %} >
+                  Water Features
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input style="margin: 10px;" type="checkbox" {% if seats %} checked {% endif %} >
+                  Seats
+                </label>
+              </div>
+              {% endif %}
+              
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;">Mixing Type</label><br>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input id="color-mix" style="margin: 10px;" type="checkbox" {% if colorMix %} checked {% endif %} >
+                  Color Mix
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input id="texture-material-mix" style="margin: 10px; box-sizing: border-box;" type="checkbox" value="texture/material mix" {% if textureMaterialMix %} checked {% endif %} >
+                  Texture/Material Mix
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input id="pattern-mix" style="margin: 10px; box-sizing: border-box;" type="checkbox" value="pattern mix" {% if patternMix %} checked {% endif %} >
+                  Pattern Mix
+                </label>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; margin-right: -5px; margin-left: -5px; box-sizing: border-box;">
+                <div style="margin-bottom: 1rem; flex: 0 0 50%; max-width: calc(50% - 2px); margin-left: 2px; box-sizing: border-box;">
+                  <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="lighting-level">Lighting Level</label>
+                  <input style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                  type="text" name="lighting-level" id="lighting-level" value="{{ lightingLevel|title }}" />
+                </div>
+              </div>
+
+
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;">Lighting Type</label><br>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" id="direct" {% if directLight %} checked {% endif %}>
+                  Direct Light
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" id="indirect" {% if indirectLight %} checked {% endif %}>
+                  Indirect Light
+                </label>
+              </div>
+
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;">Lighting Fixtures</label><br>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if chandeliers1 %} checked {% endif %}>
+                  Chandeliers 1
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if chandeliers2 %} checked {% endif %}>
+                  Chandeliers 2
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if chandeliers3 %} checked {% endif %}>
+                  Chandeliers 3
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if chandeliers4 %} checked {% endif %}>
+                  Chandeliers 4
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if spotLight1 %} checked {% endif %}>
+                  Spot Light 1
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if spotLight2 %} checked {% endif %}>
+                  Spot Light 2
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if spotLight3 %} checked {% endif %}>
+                  Spot Light 3
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if spotLight4 %} checked {% endif %}>
+                  Spot Light 4
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if woodenLight1 %} checked {% endif %}>
+                  Wooden Light 1
+                </label>
+                <label style="display: inline-block; margin-bottom: .5rem; width: 100%; box-sizing: border-box;">
+                  <input type="checkbox" {% if woodenLight2 %} checked {% endif %}>
+                  Wooden Light 2
+                </label>
+              </div>
+
+
+              <div style="margin-bottom: 1rem">
+                <label style="display: inline-block; margin-bottom: .5rem; box-sizing: border-box;" for="comments">Comments</label>
+                <textarea 
+                  style="display: block;
+                  width: 100%;
+                  height: calc(1.5em + .75rem + 2px);
+                  padding: .375rem .75rem;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #495057;
+                  background-color: #fff;
+                  background-clip: padding-box;
+                  border: 1px solid #ced4da;
+                  border-radius: .25rem; box-sizing: border-box;"
+                id="comments" name="message" rows="5">{{ comments }}</textarea>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+
+</body>
+
+</html>

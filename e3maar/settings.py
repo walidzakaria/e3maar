@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from decouple import config
 
-PROD = config('IS_PROD') == True
+if config('IS_PROD') == True:
+    PROD = True
+else:
+    PROD = False
 
 from pathlib import Path
 
@@ -85,12 +88,24 @@ WSGI_APPLICATION = 'e3maar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if PROD:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
+            'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+            'PORT': '3306',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -178,8 +193,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'e3maar-eg.com'
+EMAIL_PORT = 465
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+SURVEY_MAIL = config('SURVEY_MAIL')
