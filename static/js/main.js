@@ -147,6 +147,14 @@
       layoutMode: 'fitRows'
     });
 
+    portfolioIsotope.isotope({
+      filter: 'xxxxx'
+    });
+
+    categoryIsotope.isotope({
+      filter: 'xxxxx'
+    });
+
     $('#category-flters li').on('click', function () {
       $("#category-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
@@ -156,7 +164,7 @@
       });
       aos_init();
     });
-    
+
     $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
@@ -202,7 +210,7 @@
     aos_init();
   });
 
-  $('.type-pic-option').click(function(e) {
+  $('.type-pic-option').click(function (e) {
     let selectedValue = $(this).attr('name');
     $('#project-type').val(selectedValue);
     $('.type-pic-option').removeClass('img-selected');
@@ -216,43 +224,43 @@
     $(this).addClass('img-selected');
   });
 
-  $('.restaurant-pic-option').click(function(e) {
+  $('.restaurant-pic-option').click(function (e) {
     const selectedValue = $(this).attr('name');
     $('#restaurant-type').val(selectedValue);
     $('.restaurant-pic-option').removeClass('img-selected');
     $(this).addClass('img-selected');
   });
 
-  $('.class-pic-option').click(function(e) {
+  $('.class-pic-option').click(function (e) {
     const selectedValue = $(this).attr('name');
     $('#design-class').val(selectedValue);
     $('.class-pic-option').removeClass('img-selected');
     $(this).addClass('img-selected');
   });
 
-  $('.design-pic-option').click(function(e) {
+  $('.design-pic-option').click(function (e) {
     const selectedValue = $(this).attr('name');
     $('#design-type').val(selectedValue);
     $('.design-pic-option').removeClass('img-selected');
     $(this).addClass('img-selected');
   });
 
-  $('.color-pic-option').click(function(e) {
+  $('.color-pic-option').click(function (e) {
     const selectedValue = $(this).attr('name');
     $('#color-scheme').val(selectedValue);
     $('.color-pic-option').removeClass('img-selected');
     $(this).addClass('img-selected');
   });
 
-  $('.material-pic-option').click(function(e) {
+  $('.material-pic-option').click(function (e) {
     const selectedValue = $(this).attr('data-value');
     $(this).toggleClass('img-selected');
     const newValue = selectedValue == 'false' ? 'true' : 'false';
     $(this).attr('data-value', newValue);
-    
+
     // check if at least one option selected
     let isValid = null;
-    $('.material-pic-option').each(function() {
+    $('.material-pic-option').each(function () {
       const dataValue = $(this).attr('data-value')
       if (dataValue == 'true') {
         isValid = true;
@@ -261,21 +269,21 @@
     $('#materials').val(isValid);
   });
 
-  $('.pattern-pic-option').click(function(e) {
+  $('.pattern-pic-option').click(function (e) {
     const selectedValue = $(this).attr('name');
     $('#pattern').val(selectedValue);
     $('.pattern-pic-option').removeClass('img-selected');
     $(this).addClass('img-selected');
   });
 
-  $('.lighting-pic-option').click(function(e) {
+  $('.lighting-pic-option').click(function (e) {
     const selectedValue = $(this).attr('name');
     $('#lighting-level').val(selectedValue);
     $('.lighting-pic-option').removeClass('img-selected');
     $(this).addClass('img-selected');
   });
 
-  $('.fixtures-pic-option').click(function(e) {
+  $('.fixtures-pic-option').click(function (e) {
     const selectedValue = $(this).attr('data-value');
     $(this).toggleClass('img-selected');
     const newValue = selectedValue == 'false' ? 'true' : 'false';
@@ -283,7 +291,7 @@
 
     // check if at least one option selected
     let isValid = null;
-    $('.fixtures-pic-option').each(function() {
+    $('.fixtures-pic-option').each(function () {
       const dataValue = $(this).attr('data-value')
       if (dataValue == 'true') {
         isValid = true;
@@ -292,16 +300,16 @@
     $('#fixtures').val(isValid);
   });
 
-  $('.features-pic-option').click(function(e) {
+  $('.features-pic-option').click(function (e) {
     const selectedValue = $(this).attr('data-value');
     $(this).toggleClass('img-selected');
     const newValue = selectedValue == 'false' ? 'true' : 'false';
     $(this).attr('data-value', newValue);
   });
 
-  $('.mixing-check').change(function() {
+  $('.mixing-check').change(function () {
     let isValid = null;
-    $('.mixing-check').each(function() {
+    $('.mixing-check').each(function () {
       const checkedValue = $(this).prop('checked');
       if (checkedValue) {
         isValid = true;
@@ -310,9 +318,9 @@
     $('#mixing-type').val(isValid);
   });
 
-  $('.lighting-check').change(function() {
+  $('.lighting-check').change(function () {
     let isValid = null;
-    $('.lighting-check').each(function() {
+    $('.lighting-check').each(function () {
       const checkedValue = $(this).prop('checked');
       if (checkedValue) {
         isValid = true;

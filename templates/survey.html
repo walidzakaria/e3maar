@@ -31,421 +31,134 @@
           <br>
         </div>
         <div class="col-lg-10">
-          <form id="survey-form" action="/api/survey/" method="post" role="form" class="php-email-form">
-            <p>
-              To reach the best result, kindly fill-in the Survey with your best options, to let our Designing Team
-              execute what is best suitable for you.
-            </p>
-            <p class="ar">
-              للوصول لأفضل نتيجة يرجى تعبئة الإستبيان بما يتوافق مع أذواقكم , ليقوم فريق التصميم بتنفيذ ما يتماشى مع
-              احتياجاتكم.
-            </p>
-            <div class="form-row">
-              <div class="col-md-6 form-group">
-                <label for="name">Name<span class="ar">الاسم</span></label>
-                <input type="text" name="name" class="form-control" id="name" data-rule="required"
-                  data-msg="Please enter at your name" />
-                <div class="validate"></div>
+          <form action="" id="wizard">
+            <!-- SECTION 1 -->
+            <h2></h2>
+            <section>
+              <div class="inner">
+                <div class="image-holder">
+                  <img src="images/form-wizard-1.jpg" alt="">
+                </div>
+                <div class="form-content">
+                  <div class="form-header">
+                    <h3>Registration</h3>
+                  </div>
+                  <p>Please fill with your details</p>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <input type="text" placeholder="First Name" class="form-control">
+                    </div>
+                    <div class="form-holder">
+                      <input type="text" placeholder="Last Name" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <input type="text" placeholder="Your Email" class="form-control">
+                    </div>
+                    <div class="form-holder">
+                      <input type="text" placeholder="Phone Number" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <input type="text" placeholder="Age" class="form-control">
+                    </div>
+                    <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                      <div class="checkbox-tick">
+                        <label class="male">
+                          <input type="radio" name="gender" value="male" checked> Male<br>
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="female">
+                          <input type="radio" name="gender" value="female"> Female<br>
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-circle">
+                    <label>
+                      <input type="checkbox" checked> Nor again is there anyone who loves or pursues or desires to
+                      obtaini.
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6 form-group">
-                <label for="email">Email<span class="ar">الإيميل</span></label>
-                <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                  data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6 form-group">
-                <label for="phone">Phone<span class="ar">التليفون</span></label>
-                <input type="tel" class="form-control" name="phone" id="phone" data-rule="minlen:6"
-                  data-msg="Please enter a valid phone number" />
-                <div class="validate"></div>
-              </div>
-            </div>
+            </section>
 
-            <div class="form-group">
-              <label>Project Type<span class="ar">نوع المشروع</span></label><br>
-              <input type="hidden" id="project-type" name="project-type" data-rule="required"
-                data-msg="Please select one option">
-              <div class="validate"></div>
-              <div class="pic-selection">
-                <div class="type-pic-option pic-option" name="commercial">
-                  <img src="/static/img/survey/survey-01.jpg" />
-                  <div>Commercial</div>
-                  <div class="ar">محلات تجارية</div>
+            <!-- SECTION 2 -->
+            <h2></h2>
+            <section>
+              <div class="inner">
+                <div class="image-holder">
+                  <img src="images/form-wizard-2.jpg" alt="">
                 </div>
-                <div class="type-pic-option pic-option" name="residential">
-                  <img src="/static/img/survey/survey-02.jpg" />
-                  <div>Residential</div>
-                  <div class="ar">سكني</div>
-                </div>
-                <div class="type-pic-option pic-option" name="companyHeadquarter">
-                  <img src="/static/img/survey/survey-03.jpg" />
-                  <div>Company Headquarter</div>
-                  <div class="ar">مقر شركة</div>
-                </div>
-                <div class="type-pic-option pic-option" name="restaurantCafeteria">
-                  <img src="/static/img/survey/survey-04.jpg" />
-                  <div>Restaurant/Cafeteria</div>
-                  <div class="ar">مطعم/مقهى</div>
-                </div>
-                <div class="type-pic-option pic-option" name="hotel">
-                  <img src="/static/img/survey/survey-05.jpg" />
-                  <div>Hotel</div>
-                  <div class="ar">فندق</div>
-                </div>
-                <div class="type-pic-option pic-option" name="office">
-                  <img src="/static/img/survey/survey-06.jpg" />
-                  <div>Office</div>
-                  <div class="ar">مكتب</div>
-                </div>
-                <div class="type-pic-option pic-option" name="landscape">
-                  <img src="/static/img/survey/survey-07.jpg" />
-                  <div>Landscape</div>
-                  <div class="ar">مساحات خارجية</div>
+                <div class="form-content">
+                  <div class="form-header">
+                    <h3>Registration</h3>
+                  </div>
+                  <p>Please fill with additional info</p>
+                  <div class="form-row">
+                    <div class="form-holder w-100">
+                      <input type="text" placeholder="Address" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <input type="text" placeholder="City" class="form-control">
+                    </div>
+                    <div class="form-holder">
+                      <input type="text" placeholder="Zip Code" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="select">
+                      <div class="form-holder">
+                        <div class="select-control">Your country</div>
+                        <i class="zmdi zmdi-caret-down"></i>
+                      </div>
+                      <ul class="dropdown">
+                        <li rel="United States">United States</li>
+                        <li rel="United Kingdom">United Kingdom</li>
+                        <li rel="Viet Nam">Viet Nam</li>
+                      </ul>
+                    </div>
+                    <div class="form-holder"></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div class="form-group" id="restaurant-section" style="display: none;">
-              <label>Restaurant Type<span class="ar">طابع المطعم</span></label><br>
-              <input type="hidden" id="restaurant-type" name="restaurant-type">
-              <div class="pic-selection">
-                <div class="restaurant-pic-option pic-option" id="italian" name="italian">
-                  <img src="/static/img/survey/survey-08.jpg" />
-                  <div>Italian</div>
-                  <div class="ar">إيطالي</div>
+            <!-- SECTION 3 -->
+            <h2></h2>
+            <section>
+              <div class="inner">
+                <div class="image-holder">
+                  <img src="images/form-wizard-3.jpg" alt="">
                 </div>
-                <div class="restaurant-pic-option pic-option" id="american" name="american">
-                  <img src="/static/img/survey/survey-09.jpg" />
-                  <div>American</div>
-                  <div class="ar">أمريكي</div>
-                </div>
-                <div class="restaurant-pic-option pic-option" id="bohemian" name="bohemian">
-                  <img src="/static/img/survey/survey-10.jpg" />
-                  <div>Bohemian</div>
-                  <div class="ar">بوهيمي</div>
-                </div>
-                <div class="restaurant-pic-option pic-option" id="arabic" name="arabic">
-                  <img src="/static/img/survey/survey-11.jpg" />
-                  <div>Arabic</div>
-                  <div class="ar">عربي</div>
-                </div>
-                <div class="restaurant-pic-option pic-option" id="asian" name="asian">
-                  <img src="/static/img/survey/survey-12.jpg" />
-                  <div>Asian</div>
-                  <div class="ar">أسيوي</div>
+                <div class="form-content">
+                  <div class="form-header">
+                    <h3>Registration</h3>
+                  </div>
+                  <p>Send an optional message</p>
+                  <div class="form-row">
+                    <div class="form-holder w-100">
+                      <textarea name="" id="" placeholder="Your messagere here!" class="form-control"
+                        style="height: 99px;"></textarea>
+                    </div>
+                  </div>
+                  <div class="checkbox-circle mt-24">
+                    <label>
+                      <input type="checkbox" checked> Please accept <a href="#">terms and conditions ?</a>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="form-group" id="design-class-section" style="display: none;">
-              <label>Design Class<span class="ar">تصنيف التصميم</span></label><br>
-              <input type="hidden" id="design-class" name="design-class">
-              <div class="pic-selection">
-                <div class="class-pic-option pic-option" id="plaza" name="plaza">
-                  <img src="/static/img/survey/survey-41.jpg" />
-                  <div>Plaza</div>
-                  <div class="ar">ساحة عامة</div>
-                </div>
-                <div class="class-pic-option pic-option" id="private-garden" name="private-garden">
-                  <img src="/static/img/survey/survey-42.jpg" />
-                  <div>Private Garden</div>
-                  <div class="ar">حديقة خاصة</div>
-                </div>
-                <div class="class-pic-option pic-option" id="walking-path" name="walking-path">
-                  <img src="/static/img/survey/survey-43.jpg" />
-                  <div>Walking Path</div>
-                  <div class="ar">ممرات مشاة</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group" id="design-type-section">
-              <label>Design Type<span class="ar">نوع التصميم</span></label><br>
-              <input type="hidden" id="design-type" name="design-type">
-              <div class="pic-selection">
-                <div class="design-pic-option pic-option" id="classical" name="classical">
-                  <img src="/static/img/survey/commercial/survey-01.jpg" />
-                  <div>Classical</div>
-                  <div class="ar">كلاسيكي</div>
-                </div>
-                <div class="design-pic-option pic-option" id="neoclassical" name="neoclassical">
-                  <img src="/static/img/survey/commercial/survey-02.jpg" />
-                  <div>Neoclassical</div>
-                  <div class="ar">نيو كلاسيكي</div>
-                </div>
-                <div class="design-pic-option pic-option" id="minimal" name="minimal">
-                  <img src="/static/img/survey/commercial/survey-03.jpg" />
-                  <div>Minimal</div>
-                  <div class="ar">بسيط</div>
-                </div>
-                <div class="design-pic-option pic-option" id="modern" name="modern">
-                  <img src="/static/img/survey/commercial/survey-04.jpg" />
-                  <div>Modern</div>
-                  <div class="ar">عصري</div>
-                </div>
-                <div class="design-pic-option pic-option" id="traditional" name="traditional">
-                  <img src="/static/img/survey/commercial/survey-05.jpg" />
-                  <div>Traditional</div>
-                  <div class="ar">تقليدي</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Color Scheme<span class="ar">أنظمة الألوان</span></label><br>
-              <input type="hidden" id="color-scheme" name="color-scheme">
-              <div class="validate"></div>
-              <div class="pic-selection">
-                <div class="color-pic-option pic-option" name="cold">
-                  <img src="/static/img/survey/survey-13.jpg" />
-                  <div>Cold Colors</div>
-                  <div class="ar">ألوان باردة</div>
-                </div>
-                <div class="color-pic-option pic-option" name="mixed">
-                  <img src="/static/img/survey/survey-14.jpg" />
-                  <div>Mixed Colors</div>
-                  <div class="ar">ألوان متغايرة</div>
-                </div>
-                <div class="color-pic-option pic-option" name="warm">
-                  <img src="/static/img/survey/survey-15.jpg" />
-                  <div>Warm Colors</div>
-                  <div class="ar">ألوان دافئة</div>
-                </div>
-                <div class="color-pic-option pic-option" name="earth">
-                  <img src="/static/img/survey/survey-16.jpg" />
-                  <div>Earth Colors</div>
-                  <div class="ar">ألوان ترابية</div>
-                </div>
-                <div class="color-pic-option pic-option" name="bold">
-                  <img src="/static/img/survey/survey-17.jpg" />
-                  <div>Bold Colors</div>
-                  <div class="ar">ألوان جريئة</div>
-                </div>
-                <div class="color-pic-option pic-option" name="vital">
-                  <img src="/static/img/survey/survey-18.png" />
-                  <div>Vital Colors</div>
-                  <div class="ar">ألوان حيوية</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Materials<span class="ar">المواد المفضلة</span></label><br>
-              <input type="hidden" name="materials" id="materials">
-              <div class="validate"></div>
-              <div class="pic-selection">
-                <div class="material-pic-option pic-option" name="wood" id="wood" data-value="false">
-                  <img src="/static/img/survey/survey-19.jpg" />
-                  <div>Wood</div>
-                  <div class="ar">الخشب</div>
-                </div>
-                <div class="material-pic-option pic-option" name="stone" id="stone" data-value="false">
-                  <img src="/static/img/survey/survey-20.jpg" />
-                  <div>Stone</div>
-                  <div class="ar">الحجر</div>
-                </div>
-                <div class="material-pic-option pic-option" name="marble-granite" id="marble-granite" data-value="false">
-                  <img src="/static/img/survey/survey-21.jpg" />
-                  <div>Marble & Granite</div>
-                  <div class="ar">الرخام & الجرانيت</div>
-                </div>
-                <div class="material-pic-option pic-option" name="metal" id="metal" data-value="false">
-                  <img src="/static/img/survey/survey-22.jpg" />
-                  <div>Metal</div>
-                  <div class="ar">الحديد والألوميتال</div>
-                </div>
-                <div class="material-pic-option pic-option" name="glass" id="glass" data-value="false">
-                  <img src="/static/img/survey/survey-23.jpg" />
-                  <div>Glass</div>
-                  <div class="ar">الزجاج</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Patterns<span class="ar">الأنماط</span></label><br>
-              <input type="hidden" id="pattern" name="pattern">
-              <div class="validate"></div>
-              <div class="pic-selection">
-                <div class="pattern-pic-option pic-option" name="big">
-                  <img src="/static/img/survey/survey-24.jpg" />
-                  <div>Big Pattern</div>
-                  <div class="ar">نمط كبير</div>
-                </div>
-                <div class="pattern-pic-option pic-option" name="small">
-                  <img src="/static/img/survey/survey-25.jpg" />
-                  <div>Small Pattern</div>
-                  <div class="ar">نمط صغير</div>
-                </div>
-                <div class="pattern-pic-option pic-option" name="graphic">
-                  <img src="/static/img/survey/survey-26.jpg" />
-                  <div>Graphic Pattern</div>
-                  <div class="ar">نمط جرافيكي</div>
-                </div>
-                <div class="pattern-pic-option pic-option" name="traditional">
-                  <img src="/static/img/survey/survey-27.jpg" />
-                  <div>Traditional Pattern</div>
-                  <div class="ar">نمط تقليدي</div>
-                </div>
-                <div class="pattern-pic-option pic-option" name="no">
-                  <img src="/static/img/survey/survey-28.jpg" />
-                  <div>No Patterns</div>
-                  <div class="ar">لا أنماط</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group" id="preferred-features-section" style="display: none;">
-              <label>Preferred Features<span class="ar">المعالم المفضلة</span></label><br>
-              <input type="hidden" name="preferred-features" id="preferred-features">
-              <div class="pic-selection">
-                <div class="features-pic-option pic-option" name="seats" id="seats" data-value="false">
-                  <img src="/static/img/survey/survey-44.jpg" />
-                  <div>Seats</div>
-                  <div class="ar">جلسات</div>
-                </div>
-                <div class="features-pic-option pic-option" name="water-features" id="water-features" data-value="false">
-                  <img src="/static/img/survey/survey-45.jpg" />
-                  <div>Water Features</div>
-                  <div class="ar">معالم مائية</div>
-                </div>
-                <div class="features-pic-option pic-option" name="light" id="light" data-value="false">
-                  <img src="/static/img/survey/survey-46.jpg" />
-                  <div>Light</div>
-                  <div class="ar">إضاءة</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Mixing Type<span class="ar">أنواع المزج</span></label><br>
-              <input type="hidden" id="mixing-type" name="mixing-type">
-              <div class="validate"></div>
-              <label class="checkbox"><input id="color-mix" class="mixing-check" type="checkbox" value="color mix">
-                Color Mix
-                <span class="ar-choice">مزج الألوان</span>
-              </label>
-              <label class="checkbox">
-                <input id="texture-material-mix" class="mixing-check" type="checkbox" value="texture/material mix">
-                Texture/Material Mix<span class="ar-choice">مزج المواد المختلفة</span>
-              </label>
-              <label class="checkbox">
-                <input id="pattern-mix" class="mixing-check" type="checkbox" value="pattern mix">
-                Pattern Mix
-                <span class="ar-choice">مزج الأنماط</span>
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label>Lighting Level<span class="ar">درجات الإضاءة</span></label><br>
-              <input type="hidden" id="lighting-level" name="lighting-level">
-              <div class="validate"></div>
-              <div class="pic-selection">
-                <div class="lighting-pic-option pic-option" name="low">
-                  <img src="/static/img/survey/survey-29.jpg" />
-                  <div>Low</div>
-                  <div class="ar">منخفض</div>
-                </div>
-                <div class="lighting-pic-option pic-option" name="high">
-                  <img src="/static/img/survey/survey-30.jpg" />
-                  <div>High</div>
-                  <div class="ar">مرتفع</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Lighting Type<span class="ar">أنواع الإضاءة</span></label><br>
-              <input type="hidden" id="lighting-type" name="lighting-type">
-              <div class="validate"></div>
-              <label class="checkbox">
-                <input type="checkbox" id="direct" class="lighting-check" value="direct light">
-                Direct Light
-                <span class="ar-choice">إضاءة مباشرة</span>
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" id="indirect" class="lighting-check" value="indirect light">
-                Indirect Light
-                <span class="ar-choice">إضاءة غير مباشرة</span>
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label>Lighting Fixtures<span class="ar">تركيبات الإضاءة</span></label><br>
-              <input type="hidden" name="fixtures" id="fixtures">
-              <div class="validate"></div>
-              <div class="pic-selection">
-                <div class="fixtures-pic-option pic-option" name="chandeliers1" id="chandeliers1" data-value="false">
-                  <img src="/static/img/survey/survey-31.jpg" />
-                  <div>Chandeliers 1</div>
-                  <div class="ar">نجف 1</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="chandeliers1" id="chandeliers2" data-value="false">
-                  <img src="/static/img/survey/survey-32.jpg" />
-                  <div>Chandeliers 2</div>
-                  <div class="ar">نجف 2</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="chandeliers3" id="chandeliers3" data-value="false">
-                  <img src="/static/img/survey/survey-32.jpg" />
-                  <div>Chandeliers 3</div>
-                  <div class="ar">نجف 3</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="chandeliers4" id="chandeliers4" data-value="false">
-                  <img src="/static/img/survey/survey-33.jpg" />
-                  <div>Chandeliers 4</div>
-                  <div class="ar">نجف 4</div>
-                </div>
-              </div>
-              <div class="pic-selection">
-                <div class="fixtures-pic-option pic-option" name="spot-light1" id="spot-light1" data-value="false">
-                  <img src="/static/img/survey/survey-34.jpg" />
-                  <div>Spot Light 1</div>
-                  <div class="ar">دلايات 1</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="spot-light2" id="spot-light2" data-value="false">
-                  <img src="/static/img/survey/survey-35.jpg" />
-                  <div>Spot Light 2</div>
-                  <div class="ar">دلايات 2</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="spot-light3" id="spot-light3" data-value="false">
-                  <img src="/static/img/survey/survey-36.jpg" />
-                  <div>Spot Light 3</div>
-                  <div class="ar">دلايات 3</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="spot-light4" id="spot-light4" data-value="false">
-                  <img src="/static/img/survey/survey-37.jpg" />
-                  <div>Spot Light 4</div>
-                  <div class="ar">دلايات 4</div>
-                </div>
-              </div>
-              <div class="pic-selection">
-                <div class="fixtures-pic-option pic-option" name="wooden-light1" id="wooden-light1" data-value="false">
-                  <img src="/static/img/survey/survey-38.jpg" />
-                  <div>Wooden Light 1</div>
-                  <div class="ar">إضاءات خشبية 1</div>
-                </div>
-                <div class="fixtures-pic-option pic-option" name="wooden-light2" id="wooden-light2" data-value="false">
-                  <img src="/static/img/survey/survey-39.jpg" />
-                  <div>Wooden Light 2</div>
-                  <div class="ar">إضاءات خشبية 2</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="comments">Comments<span class="ar">ملاحظات</span></label>
-              <textarea id="comments" class="form-control" name="message" rows="5"
-                placeholder="Please right your comments..."></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            </section>
           </form>
         </div>
 

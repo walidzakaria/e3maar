@@ -1,3 +1,4 @@
+from django import template
 from django.shortcuts import render
 from random import shuffle
 from rest_framework.decorators import api_view, permission_classes
